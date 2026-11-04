@@ -1010,7 +1010,7 @@ const products = [
     type: "Sierra",
     description: "Equipo profesional diseñado para el corte preciso de carne en carnicerías, supermercados y cocinas gastronómicas.",
     tag: "Uso profesional",
-    image: "assets/img/Sierra.jpg"
+    image: "assets/img/sierra.jpg"
 },
 
 ];
