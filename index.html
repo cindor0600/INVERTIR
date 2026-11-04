@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Define la codificación para mostrar correctamente tildes y ñ. -->
+    <meta charset="UTF-8">
+    <!-- Hace que la web se adapte al ancho de celulares y tablets. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Texto que aparece en la pestaña del navegador. -->
+    <title>INVERTIR | Equipá tu negocio</title>
+    <!-- Descripción para buscadores. -->
+    <meta name="description" content="Equipamiento comercial para tu negocio. Consultá modelos, marcas y opciones de pago.">
+    <!-- Carga la hoja de estilos propia. -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Preconecta con Google Fonts para acelerar la carga de tipografías. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Tipografía similar a una web comercial moderna. -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- El atributo defer ejecuta JavaScript cuando el HTML ya se interpretó. -->
+    <script src="js/app.js" defer></script>
+    <script src="js/products.js" defer></script>
+</head>
+<body>
+    <!-- Encabezado fijo con marca y navegación principal. -->
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <!-- Cambiá este texto por el nombre o logo de tu negocio. -->
+            <a class="brand" href="#inicio" aria-label="Ir al inicio">
+                <span class="brand-mark">I</span>
+                <span class="brand-text">INVERTIR<span> EQUIPAMIENTO COMERCIAL</span></span>
+            </a>
+
+            <!-- Botón de menú que aparece en pantallas pequeñas. -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+            <!-- Enlaces que llevan a las secciones de la misma página. -->
+            <nav class="main-nav" id="mainNav">
+                <a href="#catalogo">Catálogo</a>
+                <a href="#como-funciona">Cómo funciona</a>
+                <a href="#preguntas">Preguntas frecuentes</a>
+                <a class="nav-contact" href="#contacto">Contacto <span>↗</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- PORTADA: presentación principal de la empresa. -->
+        <section class="hero" id="inicio">
+            <div class="hero-glow"></div>
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <!-- Etiqueta pequeña sobre el título principal. -->
+                    <div class="eyebrow"><span class="status-dot"></span> EQUIPAMIENTO PARA COMERCIOS</div>
+                    <h1>Lo recibís con <span>cero pesos.</span></h1>
+                    <p class="hero-lead">El equipo trabaja en tu negocio y se paga solo.</p>
+                    <p class="hero-description">Encontrá la máquina que necesitás para hacer crecer tu comercio. Te asesoramos para elegir el equipo adecuado.</p>
+
+                    <!-- Beneficios breves de la propuesta comercial. -->
+                    <div class="hero-benefits">
+                        <div><span class="benefit-icon">✓</span> Te lo llevamos a tu local</div>
+                        <div><span class="benefit-icon">✓</span> Pagás por día o por semana</div>
+                    </div>
+
+                    <!-- Los botones desplazan al catálogo o al contacto. -->
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#catalogo">Ver el catálogo <span>↓</span></a>
+                        <a class="button button-ghost" href="#como-funciona">¿Cómo funciona?</a>
+                    </div>
+
+                    <!-- Cifras de confianza: reemplazalas por datos reales. -->
+                    <div class="hero-proof">
+                        <div><strong>Equipo con experiencia</strong><span>a tu dispocion</span></div>
+                        <div><strong>Entrega rápida</strong><span>coordinada con vos</span></div>
+                        <div><strong>Marcas líderes</strong><span>en equipamiento</span></div>
+                    </div>
+                </div>
+
+                <!-- Imagen decorativa de la portada; podés cambiar la URL por una imagen propia. -->
+                <div class="hero-visual">
+                    <div class="hero-image-frame">
+                        <img src="assets/img/invertir logo.jpg" alt="IMAGEN DE LOGO INVERTIR">
+                    </div>
+                    <!-- Tarjeta flotante sobre la imagen. -->
+                    <div class="floating-card floating-card-top">
+                        <span class="floating-icon">✦</span>
+                        <div><strong>Equipá tu negocio</strong><small>Con asesoramiento personalizado</small></div>
+                    </div>
+                    <div class="floating-card floating-card-bottom">
+                        <span class="floating-check">✓</span>
+                        <div><strong>Empezá hoy</strong><small>Consultá por tu modelo</small></div>
+                    </div>
+                    <div class="visual-decoration"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FRANJA DE BENEFICIOS debajo de la portada. -->
+        <section class="trust-strip" aria-label="Beneficios">
+            <div class="container trust-grid">
+                <div><span class="trust-icon">↗</span><span><strong>Entrega coordinada</strong><small>Directo a tu local</small></span></div>
+                <div><span class="trust-icon">◷</span><span><strong>Planes flexibles</strong><small>Por día o por semana</small></span></div>
+                <div><span class="trust-icon">◇</span><span><strong>Marcas reconocidas</strong><small>Equipos para trabajar</small></span></div>
+            </div>
+        </section>
+
+        <!-- CATÁLOGO: la sección principal para explorar productos. -->
+        <section class="section catalog-section" id="catalogo">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker">ENCONTRÁ TU EQUIPO</span>
+                        <h2>Catálogo<span>.</span></h2>
+                        <p>Equipos para que tu negocio siga creciendo.</p>
+                    </div>
+                    <!-- El contador se actualiza desde JavaScript. -->
+                    <div class="catalog-count"><strong id="productCount">0</strong><span>modelos disponibles</span></div>
+                </div>
+
+                <!-- Barra de búsqueda: filtra por nombre, modelo, marca o categoría. -->
+                <div class="search-panel">
+                    <label class="search-label" for="searchInput">¿Qué equipo estás buscando?</label>
+                    <div class="search-row">
+                        <div class="search-input-wrap"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Buscá un modelo (ej: MT-26)"></div>
+                        <button class="button button-primary" id="searchButton" type="button">Buscar equipos</button>
+                    </div>
+                    <div class="quick-categories" aria-label="Categorías rápidas">
+                        <button class="category-chip active" data-category="todos" type="button">Todos los equipos</button>
+                        <button class="category-chip" data-category="refrigeracion" type="button">Refrigeración</button>
+                        <button class="category-chip" data-category="congelacion" type="button">Congelación</button>
+                        <button class="category-chip" data-category="Hogar" type="button">Hogar</button>
+                        <button class="category-chip" data-category="comercio" type="button">Comercio</button>
+                    </div>
+                </div>
+
+                <!-- Panel con filtros adicionales. -->
+                <div class="filter-layout">
+                    <aside class="filters-card">
+                        <div class="filters-title"><h3>Filtrar equipos</h3><button id="clearFilters" class="text-button" type="button">Limpiar</button></div>
+                        <label for="categoryFilter">Categoría</label>
+                        <select id="categoryFilter">
+                            <option value="todos">Todas las categorías</option>
+                            <option value="refrigeracion">Refrigeración</option>
+                            <option value="congelacion">Congelación</option>
+                            <option value="Hogar">Hogar</option>
+                            <option value="comercio">Comercio</option>
+                        </select>
+                        <label for="brandFilter">Marca</label>
+                        <select id="brandFilter">
+                            <option value="todas">Todas las marcas</option>
+                            <option value="Inelro">Inelro</option>
+                            <option value="Briket">Briket</option>
+                            <option value="San Agustin">San Agustin</option>
+                            <option value="Kretz">Kretz</option>
+                            <option value="Moretti">Moretti</option>
+                            <option value="Sol Real">Sol Real</option>
+                            <option value="Fineschi">Fineschi</option>
+                            <option value="Lipari">Lipari</option>
+                        </select>
+                        <label for="sortFilter">Ordenar por</label>
+                        <select id="sortFilter">
+                            <option value="recommended">Recomendados</option>
+                            <option value="name">Nombre: A-Z</option>
+                            
+                        </select>
+                    
+                    </aside>
+
+                    <!-- JavaScript inserta aquí las tarjetas de producto. -->
+                    <div class="catalog-results">
+                        <div class="results-top"><span id="resultsLabel">Todos los equipos</span><span class="results-line"></span></div>
+                        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+                        <!-- Este mensaje aparece cuando no hay coincidencias. -->
+                        <div class="empty-state" id="emptyState" hidden>
+                            <span>⌕</span><h3>No encontramos ese equipo</h3><p>Probá con otro nombre o quitá algún filtro.</p>
+                            <button class="button button-outline" id="resetSearch" type="button">Ver todos los equipos</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-bottom-note"><strong>¿No encontraste lo que buscabas?</strong><span>Consultanos por otros modelos y te ayudamos a encontrar el equipo indicado.</span><a href="#contacto">Consultar por WhatsApp ↗</a></div>
+            </div>
+        </section>
+
+        <!-- CÓMO FUNCIONA: explica el proceso en tres pasos. -->
+        <section class="section process-section" id="como-funciona">
+            <div class="container">
+                <div class="section-heading centered-heading">
+                    <span class="section-kicker">SIMPLE Y DIRECTO</span>
+                    <h2>Así de simple te equipás<span>.</span></h2>
+                    <p>Para equiparte solo necesitás una cosa: tu negocio funcionando.</p>
+                </div>
+                <div class="steps-grid">
+                    <article class="step-card"><span class="step-number">01</span><div class="step-icon">⌕</div><h3>Elegí tu equipo</h3><p>Explorá el catálogo y contanos qué máquina necesitás para tu comercio.</p></article>
+                    <article class="step-card"><span class="step-number">02</span><div class="step-icon">↗</div><h3>Lo llevamos a tu local</h3><p>Coordinamos la entrega y resolvemos tus dudas antes de empezar.</p></article>
+                    <article class="step-card"><span class="step-number">03</span><div class="step-icon">✓</div><h3>Pagás a tu ritmo</h3><p>Consultá las opciones de pago disponibles para el equipo que elegiste.</p></article>
+                </div>
+                <div class="process-callout"><div><strong>Tu próximo equipo puede estar más cerca de lo que pensás.</strong><span>Hablemos sobre lo que necesita tu negocio.</span></div><a class="button button-dark" href="#contacto">Quiero asesoramiento <span>↗</span></a></div>
+            </div>
+        </section>
+
+        <!-- PREGUNTAS FRECUENTES: cada pregunta se despliega al tocarla. -->
+        <section class="section faq-section" id="preguntas">
+            <div class="container faq-layout">
+                <div class="faq-intro"><span class="section-kicker">TE AYUDAMOS</span><h2>Preguntas<br>frecuentes<span>.</span></h2><p>¿Tenés dudas antes de elegir? Acá respondemos las consultas más comunes.</p><a href="#contacto" class="text-link">¿Tenés otra pregunta? Escribinos ↗</a></div>
+                <div class="faq-list">
+                    <details class="faq-item" open><summary>¿Necesito tener toda la plata para empezar?</summary><p>Las condiciones dependen del equipo y del plan disponible. Contactanos para conocer las opciones vigentes para tu negocio.</p></details>
+                    <details class="faq-item"><summary>¿Cómo se realizan los pagos?</summary><p>Podés consultar si el equipo que te interesa admite pagos diarios o semanales. Te explicaremos las condiciones antes de avanzar.</p></details>
+                    <details class="faq-item"><summary>¿Qué necesito para solicitar un equipo?</summary><p>Contanos qué tipo de negocio tenés, qué equipo buscás y en qué localidad estás. Nuestro equipo te orientará sobre los requisitos.</p></details>
+                    <details class="faq-item"><summary>¿Cuánto tarda la entrega?</summary><p>El plazo depende de la disponibilidad del modelo y de la localidad. Coordinaremos la entrega directamente con vos.</p></details>
+                    <details class="faq-item"><summary>¿Los equipos tienen garantía?</summary><p>Las condiciones de garantía pueden variar según la marca y el modelo. Consultanos por la garantía específica del producto.</p></details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO: reemplazá dirección, horario y teléfono por los tuyos. -->
+        <section class="section contact-section" id="contacto">
+            <div class="container contact-card">
+                <div class="contact-copy"><span class="section-kicker">ESTAMOS PARA AYUDARTE</span><h2>Equipá tu negocio.<br><span>Hablemos.</span></h2><p>Contanos qué máquina necesitás y te ayudamos a encontrar una opción para tu comercio.</p><a class="button button-primary" id="mainWhatsapp" href="#" target="_blank" rel="noopener">Escribinos por WhatsApp <span>↗</span></a></div>
+                <div class="contact-details">
+                    <div class="contact-detail"><span class="detail-icon">◷</span><div><small>Horarios de atención</small><strong>Tenemos vendedores disponibles a cualquier horario </strong></div></div>
+                    <div class="contact-detail"><span class="detail-icon">✉</span><div><small>Contacto</small><strong>Atención personalizada</strong><span>Respondemos tus consultas por WhatsApp.</span></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA con accesos rápidos. -->
+    <footer class="site-footer">
+        <div class="container footer-main">
+            <a class="brand footer-brand" href="#inicio"><span class="brand-mark">I</span><span class="brand-text">INVERTIR<span> EQUIPAMIENTO COMERCIAL</span></span></a>
+            <p>Equipamiento para acompañar el crecimiento de tu negocio.</p>
+            <div class="footer-links"><a href="#catalogo">Catálogo</a><a href="#como-funciona">Cómo funciona</a><a href="#preguntas">Preguntas frecuentes</a><a href="#contacto">Contacto</a></div>
+        </div>
+        <div class="container footer-bottom"><span>© <span id="currentYear"></span> INVERTIR. Todos los derechos reservados.</span><a href="#inicio">Volver arriba ↑</a></div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp visible mientras se navega por la página. -->
+    <a class="whatsapp-float" id="floatingWhatsapp" href="#" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">✆</a>
+</body>
+</html>
+
